@@ -22,7 +22,7 @@ class driveBot:
         link_google_sheet = os.getenv("LINK_GOOGLE_SHEET")
         sh = self.gc.open_by_key(link_google_sheet)
         worksheet = sh.sheet1
-        worksheet.append_row(row_data)  # Adiciona nova linha à planilha
+        worksheet.append_row(row_data)  
 
     def update_row(self, row_index, new_data):
         link_google_sheet = os.getenv("LINK_GOOGLE_SHEET")
@@ -34,4 +34,4 @@ class driveBot:
         link_google_sheet = os.getenv("LINK_GOOGLE_SHEET")
         sh = self.gc.open_by_key(link_google_sheet)
         worksheet = sh.sheet1
-        worksheet.delete_rows(row_index + 1)  # Exclui a linha (índice 1-based)
+        worksheet.delete_rows(row_index + 1)  
